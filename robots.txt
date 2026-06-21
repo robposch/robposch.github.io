@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 Disallow: /impressum/
 
-# AI / LLM crawlers — opt out of the whole personal site.
+# AI / LLM crawlers — allowed everywhere except the Impressum (postal address).
 User-agent: GPTBot
 User-agent: OAI-SearchBot
 User-agent: ChatGPT-User
@@ -18,4 +18,4 @@ User-agent: Applebot-Extended
 User-agent: meta-externalagent
 User-agent: cohere-ai
 User-agent: Diffbot
-Disallow: /
+Disallow: /impressum/
