@@ -93,7 +93,7 @@ body {
 .cmd  { color: var(--bwhite); }
 
 .out  { color: var(--fg); text-shadow: 0 0 9px rgba(0,255,146,.22); }
-h1.out { font-size: 15px; font-weight: 700; margin: 0; display: block; }
+h1.out { font-size: 15px; font-weight: 400; margin: 0; display: block; }
 .em   { color: var(--bwhite); font-weight: 700; text-shadow: 0 0 12px rgba(255,255,255,.18); }
 
 /* project row (clickable) */
