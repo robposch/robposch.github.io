@@ -87,7 +87,6 @@ body {
 
 /* prompt segments */
 .usr  { color: var(--green); }
-.at   { color: var(--dim); }
 .path { color: var(--cyan); }
 .pct  { color: var(--white); }
 .cmd  { color: var(--bwhite); }
