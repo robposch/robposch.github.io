@@ -82,7 +82,7 @@ body {
   font-size: 15px;
   line-height: 1.7;
 }
-.line { margin: 0; white-space: pre-wrap; word-break: break-word; }
+.line { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; }
 .spacer { height: 1.1em; }
 
 /* prompt segments */
@@ -95,9 +95,10 @@ body {
 h1.out { font-size: 15px; font-weight: 400; margin: 0; display: block; }
 .em   { color: var(--bwhite); font-weight: 700; text-shadow: 0 0 12px rgba(255,255,255,.18); }
 
-/* project row (clickable) */
+/* project row (clickable) — name column + description with hanging indent */
 .proj {
-  display: block;
+  display: grid;
+  grid-template-columns: 24ch 1fr;
   text-decoration: none;
   color: var(--fg);
   padding: 2px 0;
@@ -128,6 +129,11 @@ h1.out { font-size: 15px; font-weight: 400; margin: 0; display: block; }
 @media (max-width: 480px) {
   .screen { font-size: 13px; padding: 18px 16px 22px; }
   .title { font-size: 12px; }
+}
+/* too narrow for a name column: stack name above description */
+@media (max-width: 700px) {
+  .proj { grid-template-columns: 1fr; }
+  .proj .desc { padding-left: 2ch; }
 }
 @media (prefers-reduced-motion: reduce) { .cursor { animation: none; } }
 
