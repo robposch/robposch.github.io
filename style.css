@@ -93,6 +93,7 @@ body {
 
 .out  { color: var(--fg); text-shadow: 0 0 9px rgba(0,255,146,.22); }
 h1.out { font-size: 15px; font-weight: 400; margin: 0; display: block; }
+.seg { white-space: nowrap; }
 .em   { color: var(--bwhite); font-weight: 700; text-shadow: 0 0 12px rgba(255,255,255,.18); }
 
 /* project row (clickable) — name column + description with hanging indent */
@@ -104,7 +105,7 @@ h1.out { font-size: 15px; font-weight: 400; margin: 0; display: block; }
   padding: 2px 0;
 }
 .proj .name { color: var(--cyan); }
-.proj .desc { color: var(--fg); }
+.proj .desc { color: var(--fg); text-wrap: balance; }
 .proj .arrow, .lnk .arrow { color: var(--yellow); }
 .proj:hover .name { text-decoration: underline; color: var(--bwhite); }
 .proj:hover { background: rgba(255,255,255,.04); }
@@ -127,7 +128,8 @@ h1.out { font-size: 15px; font-weight: 400; margin: 0; display: block; }
 @keyframes blink { 0%, 50% { opacity: 1; } 50.01%, 100% { opacity: 0; } }
 
 @media (max-width: 480px) {
-  .screen { font-size: 13px; padding: 18px 16px 22px; }
+  body { padding: 24px 10px; }
+  .screen { font-size: 12px; padding: 16px 14px 20px; }
   .title { font-size: 12px; }
 }
 /* too narrow for a name column: stack name above description */
