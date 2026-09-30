@@ -106,6 +106,7 @@ h1.out { font-size: 15px; font-weight: 400; margin: 0; display: block; }
 }
 .proj .name { color: var(--cyan); }
 .proj .desc { color: var(--fg); text-wrap: balance; }
+.proj .short { display: none; }
 .proj .arrow, .lnk .arrow { color: var(--yellow); }
 .proj:hover .name { text-decoration: underline; color: var(--bwhite); }
 .proj:hover { background: rgba(255,255,255,.04); }
@@ -136,6 +137,9 @@ h1.out { font-size: 15px; font-weight: 400; margin: 0; display: block; }
 @media (max-width: 700px) {
   .proj { grid-template-columns: 1fr; }
   .proj .desc { padding-left: 2ch; }
+  /* one-line descriptions so rows never wrap on phones */
+  .proj .long { display: none; }
+  .proj .short { display: inline; }
 }
 @media (prefers-reduced-motion: reduce) { .cursor { animation: none; } }
 
